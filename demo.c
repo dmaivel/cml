@@ -55,8 +55,8 @@ int main(int argc, char **argv)
         cml_new_layer(&ctx, &color_identifier, n_inputs, CML_ACT_NONE);
         
         /* 
-        * randomize hidden & output weights (only randomize output bias)
-        */
+         * randomize hidden & output weights (only randomize output bias)
+         */
         cml_randomize_layer(cml_new_layer(&ctx, &color_identifier, 12, CML_ACT_PRELU), false);
         output = cml_randomize_layer(cml_new_layer(&ctx, &color_identifier, n_outputs, CML_ACT_SIGMOID), true);
     } 
