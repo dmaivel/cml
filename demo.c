@@ -75,7 +75,7 @@ int main(int argc, char **argv)
             for (int i = 0; i < n_sets; i++) {
                 memcpy(color_identifier->data, &training_inputs[i * n_inputs], sizeof(float) * n_inputs);
                 cml_fwd(color_identifier);
-                cml_bck(&ctx, color_identifier, &training_outputs[i * n_outputs], 0.5);
+                cml_bwd(&ctx, color_identifier, &training_outputs[i * n_outputs], 0.5);
             }
         }
     }
