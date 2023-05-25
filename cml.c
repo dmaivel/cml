@@ -224,7 +224,7 @@ void cml_fwd(struct cml_layer *root)
     }
 }
 
-void cml_bck(struct cml_context *ctx, struct cml_layer *root, float *last_layer_raw, float step)
+void cml_bwd(struct cml_context *ctx, struct cml_layer *root, float *last_layer_raw, float step)
 {
     assert(root->next && "cannot complete backward pass on single layer");
 

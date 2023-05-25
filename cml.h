@@ -45,4 +45,4 @@ bool cml_load_model(struct cml_context *ctx, char *path, struct cml_layer **root
 struct cml_layer *cml_randomize_layer(struct cml_layer *layer, bool bias);
 
 void cml_fwd(struct cml_layer *root);
-void cml_bck(struct cml_context *ctx, struct cml_layer *root, float *last_layer_raw, float step);
+void cml_bwd(struct cml_context *ctx, struct cml_layer *root, float *last_layer_raw, float step);

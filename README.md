@@ -52,7 +52,7 @@ memcpy(raw_data, output_layer->data, sizeof(float) * output_layer->count);
 cml_fwd(network);
 
 // backwards prop (allocates memory, so context needs to be passed)
-cml_bck(&ctx, network, &raw_training_outputs[...], step_size);
+cml_bwd(&ctx, network, &raw_training_outputs[...], step_size);
 ```
 ### loading/saving models
 ```c
