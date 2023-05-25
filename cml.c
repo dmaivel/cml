@@ -9,7 +9,7 @@
 #define MIN(a,b) (((a)<(b))?(a):(b))
 #define MAX(a,b) (((a)>(b))?(a):(b))
 
-static void* cml_alloc_wrapper(struct cml_context *ctx, size_t size)
+static void *cml_alloc_wrapper(struct cml_context *ctx, size_t size)
 {
     assert(ctx->cur_alloc + size < ctx->max_alloc);
     ctx->cur_alloc += size;
