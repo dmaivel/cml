@@ -36,6 +36,10 @@ struct cml_layer {
     enum cml_activation actfn;
 };
 
+#ifdef  __cplusplus
+extern "C" {
+#endif
+
 struct cml_layer *cml_new_layer(struct cml_context *ctx, struct cml_layer **root, int count, enum cml_activation activation);
 void cml_free(struct cml_context *ctx, struct cml_layer **root);
 
@@ -46,3 +50,7 @@ struct cml_layer *cml_randomize_layer(struct cml_layer *layer, bool bias);
 
 void cml_fwd(struct cml_layer *root);
 void cml_bwd(struct cml_context *ctx, struct cml_layer *root, float *last_layer_raw, float step);
+
+#ifdef  __cplusplus
+}
+#endif
